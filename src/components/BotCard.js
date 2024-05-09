@@ -1,5 +1,6 @@
 import React from "react";
 
+// Define classes for different bot types
 const botTypeClasses = {
   Assault: "icon military",
   Defender: "icon shield",
@@ -9,11 +10,14 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
+// Component for rendering a single bot card
 function BotCard({ bot, action, removeCard }) {
+  // Function to handle adding a bot to the army
   function handleAddArmy(e) {
     action(bot);
   }
 
+  // Function to handle removing a bot from the army
   function handleRemoveArmy(e) {
     removeCard(bot);
   }
